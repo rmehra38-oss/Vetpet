@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vetpet | Pet care store</title>
+    <meta name="description" content="Vetpet is a full-stack pet store demo with shopping, services, booking, and fixed destination redirects.">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="Vetpet home"><span>🐾</span> Vetpet</a>
+        <div class="nav-links">
+          <a href="/go/shop">Shop</a>
+          <a href="/go/services">Services</a>
+          <a href="/go/appointment">Book</a>
+          <a href="/go/support">Support</a>
+        </div>
+      </nav>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Trusted care, playful shopping</p>
+          <h1>Everything your pet needs, delivered with expert guidance.</h1>
+          <p class="hero-copy">Browse curated bundles, discover wellness services, and check out from one responsive full-stack web app.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="/go/shop">Shop essentials</a>
+            <a class="button secondary" href="/go/appointment">Book a consultation</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Today's highlight">
+          <span class="hero-pet">🐕</span>
+          <h2>Redirects fixed</h2>
+          <p>Navigation actions now use the server-backed <code>/go/:destination</code> route so every call-to-action lands in the right place.</p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section id="shop" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Shop</p>
+          <h2>Curated essentials</h2>
+          <p>Products load from the backend API and can be added to your local cart.</p>
+        </div>
+        <div id="products" class="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="services" class="section split-section">
+        <div>
+          <p class="eyebrow">Services</p>
+          <h2>Care beyond the cart</h2>
+          <p>Vetpet combines shopping with appointment-ready services for everyday pet parenting.</p>
+        </div>
+        <div id="services-list" class="service-list" aria-live="polite"></div>
+      </section>
+
+      <section id="appointment" class="section checkout-section">
+        <div class="cart-panel">
+          <h2>Your cart</h2>
+          <div id="cart-items" class="cart-items"></div>
+          <p class="cart-total">Subtotal: <strong id="cart-total">$0.00</strong></p>
+        </div>
+        <form id="checkout-form" class="checkout-form">
+          <p class="eyebrow">Checkout</p>
+          <h2>Reserve your order</h2>
+          <label>
+            Name
+            <input name="customerName" type="text" autocomplete="name" required minlength="2" placeholder="Alex Petlover">
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required placeholder="alex@example.com">
+          </label>
+          <button class="button primary" type="submit">Place order</button>
+          <p id="checkout-message" class="form-message" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built as a complete Vetpet full-stack app with API data, checkout, and reliable redirects.</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
