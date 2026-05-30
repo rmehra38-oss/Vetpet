@@ -23,7 +23,7 @@ npm test
 
 ## Deploy to Vercel
 
-The repository includes `vercel.json`, which serves the static files from `public/` and rewrites `/api/*` plus `/go/*` traffic to the Node serverless handler in `api/index.js`.
+The repository includes `vercel.json`, which explicitly deploys `api/index.js` as a Node serverless function, serves static files from `public/`, and routes `/api/*` plus `/go/*` traffic to the function so the production root URL does not fall through to Vercel's `404: NOT_FOUND` page.
 
 ```bash
 vercel --prod
