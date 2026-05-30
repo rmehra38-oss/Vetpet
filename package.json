@@ -1,0 +1,22 @@
+{
+  "name": "vetpet-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack pet store app with reliable destination redirects.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "pet-store",
+    "full-stack",
+    "redirect"
+  ],
+  "author": "",
+  "license": "MIT"
+}
